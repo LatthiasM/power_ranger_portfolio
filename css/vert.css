@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: radial-gradient(circle, rgba(194,240,178,1) 7%, rgba(97,190,135,1) 34%, rgba(47,116,88,1) 61%, rgba(18,57,56,1) 100%);
+  transition: background 1.5s ease-in-out;
+  color: #fff;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.header-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.header-box h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.header-box p {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.cv-button {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: green;
+}
+
+.card ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+  line-height: 1.6;
+}
+
+
+section .hover-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section .hover-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+a {
+  color: #d8ffd9;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+footer {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+h3 {
+  color: #163613;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(105, 255, 138, 0.4);
+  backdrop-filter: blur(5px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+  transform: scale(1.05) translateY(0px) !important;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+
+p, li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #3b8b3f;
+}
+
+p.text-black-600 {
+  color: #2e071b;
+}
+
+a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #ffe0f0;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+canvas#techChart, canvas#softChart {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto 0;
+  display: block;
+  border: 2px solid white;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+button {
+  font-weight: 600;
+}
+
+strong {
+  color: #0d6b1d;
+}
+
+.card h2::before {
+  content: "✨ ";
+}
+
+.cv-button {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.cv-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 4px solid #61BE87;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.6s ease-in-out;
+  backface-visibility: hidden;
+}
+
+::selection {
+  background: rgb(109, 173, 114);
+}

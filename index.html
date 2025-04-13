@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power Rangers - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+  <script src="js/carousel.js"></script>
+</head>
+<body class="dark-mode">
+    <div id="particles-js"></div>
+  <!-- Navbar -->
+  <nav class="bg-white bg-opacity-80 fixed w-full top-0 z-50 flex justify-between items-center px-6 py-4 dark-section">
+    <ul class="flex space-x-6 font-semibold">
+        <li><a href="#about" class="hover:text-yellow-400 transition">À Propos</a></li>
+        <li><a href="#projects" class="hover:text-yellow-400 transition">Projets</a></li>
+        <li><a href="#team" class="hover:text-yellow-400 transition">Équipe</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400 transition">Contact</a></li>
+    </ul>
+
+    <!-- Bouton de mode sombre intégré à la navbar -->
+    <button id="theme-toggle" class="p-2 bg-gray-800 text-white rounded-full shadow-md hover:bg-gray-700 transition">
+        🌙
+    </button>
+</nav>
+
+  <!-- Section de présentation -->
+  <header id="about" class="mt-20 md-0">
+    <h1 id="dynamic-title" class="justify-left text-5xl font-bold text-white relative z-10 dark-font"></h1>
+    <p id="dynamic-slogan" class="justify-left text-xl text-white mt-3 relative z-10 dark-font"></p>
+</header>
+
+    <!-- Galerie des membres -->
+    <!-- Section de l'équipe en pleine page -->
+    <section id="team" class="relative h-screen flex flex-col justify-center items-center bg-fixed bg-cover bg-center reveal-section">
+        <div class="gallery">
+            <a href="pages/paul.html" class="card ranger-large">
+                <img src="img/beige.jpg" alt="Paul - Power Ranger 1">
+            </a>
+            <a href="pages/roxana.html" class="card ranger-small">
+                <img src="img/rose.jpg" alt="Roxana - Power Ranger 2">
+            </a>
+            <a href="pages/mathis.html" class="card ranger-small">
+                <img src="img/rouge.jpg" alt="Mathis - Power Ranger 3">
+            </a>
+            <a href="pages/matthias.html" class="card ranger-large">
+                <img src="img/vert.jpg" alt="Matthias - Power Ranger 4">
+            </a>
+        </div>
+    </section>
+
+
+    <!-- INTRO -->
+<section id="intro" class="text-center max-w-3xl mx-auto px-8 py-12 reveal-section">
+  <h1 class="text-4xl font-bold mb-4" data-text="Bienvenue dans notre QG Digital 💻🦸‍♀️">
+    Bienvenue dans notre QG Digital 💻🦸‍♀️
+  </h1>
+  <div class="dark-section p-6 rounded-xl shadow-lg hover:scale-105 transition">
+  <p class="text-lg text-gray-200 leading-relaxed">
+    Nous sommes une équipe de 4 étudiants passionnés en <strong>Master MIASHS ICE-LD</strong>, unis comme les Power Rangers pour combattre les projets complexes à coups de lignes de code, de dashboards, et de solutions créatives.
+  </p>
+  </div>
+</section>
+
+<!-- ÉQUIPE -->
+<section class="max-w-6xl mx-auto mt-16 text-center">
+  <h2 class="text-3xl font-bold mb-8">🔍 Qui sommes-nous ?</h2>
+  <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 ">
+    <div class="dark-section p-6 rounded-xl shadow-lg hover:scale-105 transition">
+      <h3 class="text-xl font-semibold mb-2">🟤 Paul – Ranger Beige</h3>
+      <p>Notre analyste de données. Il lit les chiffres comme dans la matrice et révèle les tendances cachées.</p>
+    </div>
+    <div class="dark-section p-6 rounded-xl shadow-lg hover:scale-105 transition">
+      <h3 class="text-xl font-semibold mb-2">🌸 Roxana – Ranger Rose</h3>
+      <p>Spécialiste des interfaces front-end. Elle transforme les maquettes en expériences utilisateurs fluides et stylées.</p>
+    </div>
+    <div class="dark-section p-6 rounded-xl shadow-lg hover:scale-105 transition">
+      <h3 class="text-xl font-semibold mb-2">❤️ Mathis – Ranger Rouge</h3>
+      <p>Le développeur backend du groupe. Il optimise, sécurise, et structure comme un véritable ninja du serveur.</p>
+    </div>
+    <div class="dark-section p-6 rounded-xl shadow-lg hover:scale-105 transition">
+      <h3 class="text-xl font-semibold mb-2">💚 Matthias – Ranger Vert</h3>
+      <p>Créatif et complet, il touche à tout : design, data, dev, automatisation… un vrai moteur d'équipe.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CARROUSEL COMPÉTENCES -->
+<section id="skills-carousel" class="py-12 px-6 text-center reveal-section">
+  <h2 class="text-3xl font-bold mb-6 text-white">⚔️ Nos Super-Pouvoirs</h2>
+
+  <div class="relative max-w-xl mx-auto">
+  <!-- Flèches EXTÉRIEURES -->
+  <button id="carousel-prev"
+    class="absolute -left-10 top-1/2 transform -translate-y-1/2 bg-grey/10 hover:bg-white/20 text-white px-3 py-2 rounded-full z-10">
+    ◀
+  </button>
+  <button id="carousel-next"
+    class="absolute -right-10 top-1/2 transform -translate-y-1/2 bg-grey/10 hover:bg-white/20 text-white px-3 py-2 rounded-full z-10">
+    ▶
+  </button>
+
+    <!-- Conteneur du carrousel -->
+    <div id="carousel-track" class="overflow-hidden">
+      <div id="carousel-inner" class="flex transition-transform duration-500 ease-in-out" id="carousel-inner">
+        <div class="min-w-full carousel-card dark-section p-6 rounded-xl shadow-md backdrop-blur hover:scale-105 transition">
+          💻 Dev Web<br><span class="text-sm text-gray-200">HTML, CSS, JS, React</span>
+        </div>
+        <div class="min-w-full carousel-card dark-section p-6 rounded-xl shadow-md backdrop-blur hover:scale-105 transition">
+          📊 Data<br><span class="text-sm text-gray-200">Python, R, Power BI</span>
+        </div>
+        <div class="min-w-full carousel-card dark-section p-6 rounded-xl shadow-md backdrop-blur hover:scale-105 transition">
+          🛠️ DevOps<br><span class="text-sm text-gray-200">Docker, Git, Linux</span>
+        </div>
+        <div class="min-w-full carousel-card dark-section p-6 rounded-xl shadow-md backdrop-blur hover:scale-105 transition">
+          🎨 UI/UX<br><span class="text-sm text-gray-200">Figma, Canva, Notion</span>
+        </div>
+        <div class="min-w-full carousel-card dark-section p-6 rounded-xl shadow-md backdrop-blur hover:scale-105 transition">
+          👥 Gestion de Projet<br><span class="text-sm text-gray-200">Trello, Teams, Discord</span>
+        </div>
+        <div class="min-w-full carousel-card dark-section p-6 rounded-xl shadow-md backdrop-blur hover:scale-105 transition">
+          🧰 Outils divers<br><span class="text-sm text-gray-200">ChatGPT, Shell</span>
+        </div>
+        <div class="min-w-full carousel-card dark-section p-6 rounded-xl shadow-md backdrop-blur hover:scale-105 transition">
+          📈 Analyse<br><span class="text-sm text-gray-200">Excel, Tableau</span>
+        </div>
+        <div class="min-w-full carousel-card dark-section p-6 rounded-xl shadow-md backdrop-blur hover:scale-105 transition">
+          🔐 Cybersécurité<br><span class="text-sm text-gray-200">Réseau, Auth</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="flex justify-center gap-2 mt-4" id="carousel-dots"></div>
+  </div>
+</section>
+
+
+
+<!-- Section Projets -->
+<section id="projects" class="mt-16 px-10 text-center reveal-section">
+  <h2 class="text-3xl font-bold mb-6 text-white">🚀 Nos Projets</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition dark-section">
+      <h3 class="text-xl font-semibold mb-2 text-yellow-400">💸 Analyses Power BI Accidents de la route</h3>
+      <p class="text-sm text-gray-200">Interface visualisation de données sur les données d'accidents en france 2021/2022.</p>
+    </div>
+    <div class="bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition dark-section">
+      <h3 class="text-xl font-semibold mb-2 text-pink-300">🕹️ Portfolio Power Rangers</h3>
+      <p class="text-sm text-gray-200">Site web interactif avec 3D, flip, dark mode, particules et design unique.</p>
+    </div>
+    <div class="bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition dark-section">
+      <h3 class="text-xl font-semibold mb-2 text-red-400">📊 SubDiving Computer</h3>
+      <p class="text-sm text-gray-200">Interface web de suivi de données reliées a la plongée.</p>
+    </div>
+    <div class="bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition dark-section">
+      <h3 class="text-xl font-semibold mb-2 text-green-300">🔬 Clustering criminalité US</h3>
+      <p class="text-sm text-gray-200">Étude avec K-means & CAH sur les données USArrests en langage R.</p>
+    </div>
+  </div>
+</section>
+
+<!-- APPEL À ACTION -->
+<section id="cta" class="text-center max-w-3xl mx-auto py-12 bg-white bg-opacity-0 rounded-xl backdrop-blur reveal-section mt-12">
+    <div class="bg-white bg-opacity-10 p-5 rounded-xl shadow-lg hover:scale-105 transition dark-section"> 
+  <h2 class="text-3xl font-bold text-white mb-4" data-text="🤝 Envie de collaborer avec nous ?">🤝 Envie de collaborer avec nous ?</h2>
+  <p class="mb-6 text-lg text-gray-200">Nous sommes disponibles pour vos projets freelance, missions courtes ou simplement échanger autour de la data et du développement web !</p>
+  <a href="mailto:contact@powerrangers.dev" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full transition">📬 Contactez-nous</a>
+  </div>
+</section>
+
+</section>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/carrousel.js"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Roxana - Power Ranger Rose</title>
+  <link rel="icon" type="image/x-icon" href="../img/rose.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/rose.css" />
+</head>
+
+<body class="text-gray-900 font-sans">
+  <!-- Fond animé (NE PAS MODIFIER) -->
+  <div id="particles-js"></div>
+
+  <!-- Contenu principal -->
+  <div class="relative z-10 max-w-5xl mx-auto px-6 py-16">
+    <!-- Bandeau de présentation -->
+    <section class="flex flex-col md:flex-row items-center bg-white bg-opacity-60 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:scale-105" data-aos="fade-up">
+      <div class="profile-container" onclick="flipProfile()">
+        <img id="profile-pic" src="../img/rox.png" alt="Roxana - Power Ranger Rose" class="profile-pic w-40 h-40 rounded-full border-4 border-pink-300 shadow-md mb-4 md:mb-0 md:mr-6" />
+      
+      <div>
+        <h1 class="text-4xl font-extrabold text-pink-900 mb-2">Roxana - Power Ranger Rose 💻🦸‍♀️</h1>
+        <p class="text-lg leading-relaxed text-white">
+          Le jour, je suis une étudiante en Master ICE-LD à l’Université Toulouse Jean Jaurès, passionnée par la data, le développement et l’UX Design. Mais la nuit, je me transforme en <strong>Power Ranger Rose</strong>, une héroïne digitale combattant les bugs et protégeant les données. Mon arme ? Le code !
+        </p>
+        <a href="../cv/cv_rox.pdf" download class="inline-block mt-4 px-5 py-2 bg-pink-200 text-gray-900 font-semibold rounded-xl shadow hover:bg-pink-300 transition">📄 Télécharger mon CV</a>
+      </div>
+    </section>
+
+    <!-- Compétences -->
+    <section class="mt-12" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6 text-white">🧠 Mes Super-Pouvoirs</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white bg-opacity-70 p-5 rounded-xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-2">💻 Développement Web</h3>
+          <p>HTML, CSS, JavaScript, React, Node.js, MongoDB</p>
+        </div>
+        <div class="bg-white bg-opacity-70 p-5 rounded-xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-2">📊 Analyse de Données</h3>
+          <p>Python (Pandas, Numpy), SQL, Power BI</p>
+        </div>
+        <div class="bg-white bg-opacity-70 p-5 rounded-xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-2">🛠️ Outils</h3>
+          <p>Git, Docker, Figma, VSCode</p>
+        </div>
+        <div class="bg-white bg-opacity-70 p-5 rounded-xl shadow hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-2">🎨 UI/UX Design</h3>
+          <p>Accessibilité, Design Thinking, Prototypage</p>
+        </div>
+      </div>
+    </section>  
+
+    <br><br>
+
+    <!-- Parcours -->
+    <section data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6 text-white">🎓 Mon Parcours de Héroïne</h2>
+      <div class="space-y-2">
+        <div class="bg-white bg-opacity-70 p-5 rounded-xl shadow hover:scale-105 transition">
+          <p class="text-lg font-semibold">2024 – 2026</p>
+          <p>Master ICE-LD – Université Toulouse Jean Jaurès</p>
+          <p class="text-sm text-black-600">Ingénierie Continue pour les Écosystèmes Logiciels et Données</p>
+        </div>
+        <div class="bg-white bg-opacity-70 p-5 rounded-xl shadow hover:scale-105 transition">
+          <p class="text-lg font-semibold">2021 – 2024</p>
+          <p>Licence MIASHS – UT2J</p>
+          <p class="text-sm text-black-600">Mathématiques et Informatique Appliquées aux Sciences Humaines et Sociales</p>
+        </div>
+        <div class="bg-white bg-opacity-70 p-5 rounded-xl shadow hover:scale-105 transition">
+          <p class="text-lg font-semibold">2017 – 2020</p>
+          <p>Baccalauréat Scientifique – Spécialité ISN</p>
+        </div>
+      </div>
+    </section>
+
+    <br><br>
+
+    <!-- Loisirs -->
+    <section data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6 text-white">🎮 Loisirs et Passion</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white bg-opacity-70 p-5 rounded-xl shadow hover:scale-105 transition flex items-center space-x-3">
+          <span class="text-2xl">🏊‍♀️</span>
+          <p class="text-lg">Sports : Natation, Escalade, Judo</p>
+        </div>
+        <div class="bg-white bg-opacity-70 p-5 rounded-xl shadow hover:scale-105 transition flex items-center space-x-3">
+          <span class="text-2xl">🎮</span>
+          <p class="text-lg">Jeux Vidéo</p>
+        </div>
+        <div class="bg-white bg-opacity-70 p-5 rounded-xl shadow hover:scale-105 transition flex items-center space-x-3">
+          <span class="text-2xl">🎨</span>
+          <p class="text-lg">Dessin Traditionnel et Digital</p>
+        </div>
+        <div class="bg-white bg-opacity-70 p-5 rounded-xl shadow hover:scale-105 transition flex items-center space-x-3">
+          <span class="text-2xl">🎲</span>
+          <p class="text-lg">Jeu de Rôle</p>
+        </div>
+      </div>
+    </section>
+
+    <br><br>
+
+    <section data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6 text-white">📊 Stats de Combat</h2>
+      <div class="flex gap-4 justify-center mb-4">
+        <button onclick="showChart('tech')" class="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600 transition">Techniques</button>
+        <button onclick="showChart('soft')" class="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600 transition">Relationnelles</button>
+        <button onclick="showChart('fight')" class="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600 transition">Combat</button>
+      </div>
+      <canvas id="techChart" class="mx-auto"></canvas>
+      <canvas id="softChart" class="mx-auto" style="display: none;"></canvas>
+      <canvas id="fightChart" class="mx-auto" style="display: none;"></canvas>
+    </section>
+
+    <br><br>
+
+    <!-- Contact -->
+    <section data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6 text-white">📬 Me Contacter</h2>
+      <div class="bg-white bg-opacity-70 p-5 rounded-xl shadow hover:scale-105 transition">
+        <div class="flex items-center space-x-3">
+          <span class="text-xl">✉️</span>
+          <a href="mailto:roxana.grosfils@etu.univ-tlse2.fr" class="text-lg underline text-pink-600">roxana.grosfils@etu.univ-tlse2.fr</a>
+        </div>
+        <div class="flex items-center space-x-3">
+          <span class="text-xl">🔗</span>
+          <a href="https://fr.linkedin.com/in/roxana-grosfils-004580208/" class="text-lg underline text-pink-600">Mon LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    
+    <footer class="pt-12 mt-12 border-t text-center text-white">
+      <a href="../index.html" class="text-sm underline">← Retour à l’accueil</a>
+    </footer>
+  </div>
+
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const techChartEl = document.getElementById('techChart');
+      const softChartEl = document.getElementById('softChart');
+      const fightChartEl = document.getElementById('fightChart');
+    
+      const techChart = new Chart(techChartEl, {
+        type: 'radar',
+        data: {
+          labels: ['HTML/CSS', 'JavaScript', 'Python', 'MongoDB', 'Node.js', 'SQL'],
+          datasets: [{
+            label: 'Compétences Techniques',
+            data: [9, 8, 9, 8, 7, 9],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          scales: {
+            r: {
+              suggestedMin: 0,
+              suggestedMax: 10
+            }
+          }
+        }
+      });
+    
+      const softChart = new Chart(softChartEl, {
+        type: 'radar',
+        data: {
+          labels: ['Communication', 'Travail d’équipe', 'Créativité', 'Autonomie', 'Curiosité', 'Analyse'],
+          datasets: [{
+            label: 'Compétences Relationnelles',
+            data: [8, 9, 8, 10, 9, 8],
+            backgroundColor: 'rgba(255, 120, 139, 0.2)',
+            borderColor: 'rgba(255, 120, 139, 1)',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          scales: {
+            r: {
+              suggestedMin: 0,
+              suggestedMax: 10
+            }
+          }
+        }
+      });
+
+      const fightChart = new Chart(fightChartEl, {
+        type: 'radar',
+        data: {
+          labels: ['Force', 'Dextérité', 'Constitution', 'Intelligence', 'Sagesse', 'Charisme'],
+          datasets: [{
+            label: 'Compétences de Combat',
+            data: [5, 7, 8, 9, 7, 8],
+            backgroundColor: 'rgba(255, 165, 178, 0.2)',
+            borderColor: 'rgba(255, 165, 178, 1)',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          scales: {
+            r: {
+              suggestedMin: 0,
+              suggestedMax: 10
+            }
+          }
+        }
+      });
+    
+      function showChart(type) {
+        if (type === 'tech') {
+          techChartEl.style.display = "block";
+          softChartEl.style.display = "none";
+          fightChartEl.style.display = "none";
+        } else if (type === 'soft') {
+          techChartEl.style.display = "none";
+          softChartEl.style.display = "block";
+          fightChartEl.style.display = "none";
+        } else {
+          techChartEl.style.display = "none";
+          softChartEl.style.display = "none";
+          fightChartEl.style.display = "block";
+        }
+      }
+    
+      // Affiche le graphique technique par défaut
+      showChart('tech');
+    </script>
+
+<script>
+  let flipped = false;
+
+  function flipProfile() {
+    const pic = document.getElementById("profile-pic");
+
+    // Lance l'animation
+    pic.style.transform = "rotateY(180deg)";
+
+    setTimeout(() => {
+      // Change l’image au milieu de la rotation
+      pic.src = flipped ? "../img/rox.png" : "../img/rosetete.png";
+      flipped = !flipped;
+
+      // Remet l’image droite pour la prochaine fois
+      pic.style.transform = "rotateY(0deg)";
+    }, 300); // mi-temps de l’animation
+  }
+</script>
+    
+
+
+  <!-- Particules -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../js/particles.js"></script>
+
+  <!-- Bouton retour en haut de page -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
+    class="fixed bottom-6 right-6 bg-white bg-opacity-30 backdrop-blur rounded-full p-3 hover:scale-105 transition shadow-lg text-white">
+    🔝
+  </button>
+</body>
+</html>
