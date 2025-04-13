@@ -231,9 +231,9 @@ button {
 }
 
 /* Mode sombre - changer les images des cartes */
-.dark-mode .ranger-large img[src="img/beige.jpg"] {
+/* .dark-mode .ranger-large img[src="img/beige.jpg"] {
   content: url("../img/paul.png");
-}
+} */
 
 /* .dark-mode .ranger-small img[src="img/rose.jpg"] {
   content: url("../img/rose-dark.jpg");
