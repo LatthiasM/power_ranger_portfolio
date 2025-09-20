@@ -1,6 +1,6 @@
 // src/components/Contact.tsx
 
-import ColoredSection from "./coloredsection";
+import ColoredSection from "./ColoredSection";
 
 export default function Contact() {
   return (
