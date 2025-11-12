@@ -4,17 +4,18 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class', // <-- 💡 MODIFICATION AJOUTÉE
   theme: {
-  extend: {
-    transitionProperty: {
-      'spacing': 'margin, padding',
+    extend: {
+      transitionProperty: {
+        'spacing': 'margin, padding',
+      },
+      transitionDuration: {
+          1500: '1500ms',
+          1800: '1800ms',
+          2000: '2000ms',
     },
-    transitionDuration: {
-        1500: '1500ms',
-        1800: '1800ms',
-        2000: '2000ms',
   },
-},
   plugins: [],
 }
 }

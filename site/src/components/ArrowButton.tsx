@@ -110,9 +110,9 @@ const StyledWrapper = styled.div<{ direction?: "right" | "left" }>`
   width: 20px;
   height: 20px;
   margin: ${({ direction }) =>
-    direction === "left" ? "17px 18px 0 18px" : "19px 18px 0 18px"};
+    direction === "right" ? "17px 18px 0 18px" : "19px 18px 0 18px"};
   fill: #f0eeef;
-  ${({ direction }) => direction === "left" && "transform: rotate(180deg);"}
+  ${({ direction }) => direction === "right" && "transform: rotate(180deg);"}
 }
 
   .button:hover .button-box,
