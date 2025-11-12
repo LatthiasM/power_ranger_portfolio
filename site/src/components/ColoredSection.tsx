@@ -17,7 +17,8 @@ export default function ColoredSection({
   return (
     <section
       id={id}
-      className={`relative flex items-center justify-center text-white bg-transparent min-h-screen ${className}`}
+      // 💡 MODIFIÉ : "text-white" remplacé par "text-gray-900 dark:text-white"
+      className={`relative flex items-center justify-center text-gray-900 dark:text-white bg-transparent min-h-screen ${className}`}
     >
       {/* Barre colorée à gauche */}
       <div className={`absolute left-0 top-0 h-full w-5 rounded-r-lg ${colorClass}`} />

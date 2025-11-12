@@ -1,79 +1,130 @@
-import { useState, useEffect } from "react";
-import ColoredSection from "./ColoredSection";
-import { ButtonLeft, ButtonRight } from "./ArrowButton";
+// src/components/ProjectsSection.tsx
+import { useState } from 'react';
+import ColoredSection from './ColoredSection';
+import FadeInSection from './FadeInSection';
+import { ButtonLeft, ButtonRight } from './ArrowButton';
+
+const projectsData = [
+  {
+    title: "Duo Project",
+    description: "Une application qui permet aux gens de pouvoir renseigner leurs histoires et de pouvoir continuer a l'écrire à deux.",
+    imageUrl: "/img/coeur.jpg", // Assurez-vous que ce chemin est correct
+    link: "https://duoproject.netlify.app/",
+    tech: ["React", "TypeScript", "Netlify"]
+  },
+  {
+    title: "Rivality",
+    description: "Une plateforme pour tracker ses performances sportives et les partager avec ses amis.",
+    imageUrl: "/img/eclair.jpg", // Assurez-vous que ce chemin est correct
+    link: "https://rivality.netlify.app/",
+    tech: ["React", "Tailwind CSS", "Netlify"]
+  },
+];
 
 export default function ProjectsSection() {
-  const projects = [
-    {
-      title: "Portfolio Power Rangers",
-      description: "Un site vitrine original inspiré des Power Rangers pour présenter notre équipe et nos projets.",
-      image: "/img/project1.png",
-    },
-    {
-      title: "Asso 404",
-      description: "Site officiel de l’association 404 MIASHS avec blog, infos et projets étudiants.",
-      image: "/img/project2.png",
-    },
-    {
-      title: "Projet mystère",
-      description: "Un nouveau projet arrive bientôt... restez connectés !",
-      image: "/img/project3.png",
-    },
-  ];
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const [index, setIndex] = useState(0);
-  const [isFading, setIsFading] = useState(false);
-  const project = projects[index];
-
-  const handlePrev = () => {
-    setIsFading(true);
-    setTimeout(() => {
-      setIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
-      setIsFading(false);
-    }, 600);
+  const goToPrevious = () => {
+    setCurrentIndex(prev => (prev === 0 ? projectsData.length - 1 : prev - 1));
   };
 
-  const handleNext = () => {
-    setIsFading(true);
-    setTimeout(() => {
-      setIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
-      setIsFading(false);
-    }, 600);
+  const goToNext = () => {
+    setCurrentIndex(prev => (prev === projectsData.length - 1 ? 0 : prev + 1));
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 10000);
-    return () => clearInterval(interval);
-  }, []);
+  const project = projectsData[currentIndex];
+
+  if (!project) {
+    return null;
+  }
 
   return (
     <ColoredSection
       id="projects"
-      colorClass="bg-purple-500 py-24 min-h-[80vh] flex flex-col justify-center items-center mb-24"
+      colorClass="bg-purple-500"
+      className="py-20 px-6 text-center"
     >
-      <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">Nos Projets</h2>
+      <FadeInSection>
+        <h2 className="text-4xl font-bold mb-6">Projets</h2>
+        
+        <div className="relative max-w-5xl mx-auto"> 
 
-      <div className="max-w-4xl mx-auto text-center space-y-6">
-        <div className={`relative overflow-hidden rounded-lg shadow-xl bg-black/30 backdrop-blur-md p-6 transition-opacity duration-700 ease-in-out ${isFading ? "opacity-0" : "opacity-100"}`}>
-          <img
-            src={project.image}
-            alt={project.title}
-            className="mx-auto rounded mb-4 max-h-64 object-cover"
-          />
-          <h3 className="text-xl font-semibold text-white/80">{project.title}</h3>
-          <p className="text-sm mt-2 text-white/80">{project.description}</p>
+          {/* Bouton Gauche */}
+          <div className="absolute left-[-50px] top-1/2 -translate-y-1/2 z-20 hidden md:block">
+            <ButtonLeft onClick={goToPrevious} />
+          </div>
+
+          {/* Encart du projet */}
+          <div className="max-w-4xl mx-auto bg-gray-200/70 dark:bg-gray-800/50 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden p-8">
+            
+            <div className="flex items-center justify-center min-h-[400px]">
+              
+              <div className="flex flex-col md:flex-row items-center gap-8 w-full">
+                {/* Image */}
+                <div className="w-full md:w-1/2">
+                  <img 
+                    src={project.imageUrl} 
+                    alt={project.title} 
+                    className="w-full h-auto object-cover rounded-lg shadow-lg aspect-video"
+                  />
+                </div>
+                
+                {/* Infos */}
+                <div className="w-full md:w-1E/2 text-left">
+                  <h3 className="text-3xl font-bold mb-3">{project.title}</h3>
+                  
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
+                  
+                  {/* Tags de technologies */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tech.map((t, i) => (
+                      <span 
+                        key={i} 
+                        className="bg-purple-200 dark:bg-purple-800 text-purple-800 dark:text-purple-100 text-xs font-semibold px-2.5 py-0.5 rounded"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Bouton Voir le projet */}
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-purple-600 dark:bg-purple-500 text-white py-2 px-5 rounded font-semibold 
+                               hover:bg-purple-500 dark:hover:bg-purple-400 transition"
+                  >
+                    Voir le projet
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+          </div> 
+
+          {/* Bouton Droit */}
+          <div className="absolute right-[-50px] top-1/2 -translate-y-1/2 z-20 hidden md:block">
+            <ButtonRight onClick={goToNext} />
+          </div>
+
+        </div> 
+
+        {/* Indicateurs (dots) */}
+        <div className="flex justify-center mt-6 space-x-2">
+          {projectsData.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              aria-label={`Aller au projet ${index + 1}`}
+              className={`w-3 h-3 rounded-full ${
+                currentIndex === index ? 'bg-purple-600 dark:bg-purple-400' : 'bg-gray-400 dark:bg-gray-600'
+              } transition`}
+            />
+          ))}
         </div>
 
-        <div className="flex justify-center gap-6">
-          <ButtonRight onClick={handlePrev} />
-          <ButtonLeft onClick={handleNext} />
-          
-          
-          
-        </div>
-      </div>
+      </FadeInSection>
     </ColoredSection>
   );
 }
