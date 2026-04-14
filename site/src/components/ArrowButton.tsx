@@ -7,7 +7,7 @@ interface ButtonProps {
 export const ButtonLeft = ({ onClick }: ButtonProps) => {
   return (
     <StyledWrapper direction="left">
-      <button onClick={onClick} className="button">
+      <button onClick={onClick} className="button" aria-label="Projet précédent">
         <div className="button-box">
           <span className="button-elem">
             <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +28,7 @@ export const ButtonLeft = ({ onClick }: ButtonProps) => {
 export const ButtonRight = ({ onClick }: ButtonProps) => {
   return (
     <StyledWrapper direction="right">
-      <button onClick={onClick} className="button">
+      <button onClick={onClick} className="button" aria-label="Projet suivant">
         <div className="button-box">
           <span className="button-elem">
             <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">

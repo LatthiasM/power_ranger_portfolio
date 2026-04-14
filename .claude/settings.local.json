@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/matth/.claude/skills/continue-claude-work/**)",
+      "Bash(python3 scripts/extract_resume_context.py)",
+      "Bash(python scripts/extract_resume_context.py)",
+      "Bash(py scripts/extract_resume_context.py)",
+      "Bash(C:/Users/matth/AppData/Local/Programs/Python/Python311/python.exe scripts/extract_resume_context.py)",
+      "Bash(C:/Users/matth/AppData/Local/Programs/Python/Python311/python.exe scripts/extract_resume_context.py --list)",
+      "Bash(C:/Users/matth/AppData/Local/Programs/Python/Python311/python.exe scripts/extract_resume_context.py --session \"94135a2f-7be3-4100-9498-72d94fc3cddd\")",
+      "Bash(C:/Users/matth/AppData/Local/Programs/Python/Python311/python.exe -c ':*)",
+      "Bash(git -C \"C:/Users/matth/OneDrive/Bureau/Projects/portfolio_power_rangers/power_ranger_portfolio\" diff --stat HEAD)",
+      "Bash(git -C \"C:/Users/matth/OneDrive/Bureau/Projects/portfolio_power_rangers/power_ranger_portfolio\" diff HEAD -- site/src/components/Hero.tsx)",
+      "Bash(git -C \"C:/Users/matth/OneDrive/Bureau/Projects/portfolio_power_rangers/power_ranger_portfolio\" diff HEAD -- site/src/pages/Matthias.tsx site/src/pages/Steven.tsx)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

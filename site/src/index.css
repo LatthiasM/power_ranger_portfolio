@@ -6,21 +6,25 @@ html, body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  cursor: none;
+}
+
+a, button, [role="button"] {
+  cursor: none;
 }
 
 * {
   box-sizing: border-box;
 }
 
-/* 💡 LOGIQUE INVERSÉE : Styles "light" (clair) par défaut */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #213547; /* Couleur "light" */
-  background-color: #ffffff; /* Fond "light" */
+  color: #213547;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,7 +32,6 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 💡 Styles "dark" (sombre) appliqués via la classe .dark */
 .dark:root {
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -36,21 +39,19 @@ html, body {
 
 a {
   font-weight: 500;
-  color: #535bf2; /* Couleur de lien "light" */
+  color: #535bf2;
   text-decoration: inherit;
 }
 a:hover {
-  color: #747bff; /* Hover de lien "light" */
+  color: #747bff;
 }
 
-/* Styles de lien pour le mode sombre */
 .dark a {
   color: #f8f8f9;
 }
 .dark a:hover {
-  color: #000000; /* Tel que défini dans votre fichier original */
+  color: #000000;
 }
-
 
 body {
   margin: 0;
@@ -64,7 +65,6 @@ h1 {
   line-height: 1.1;
 }
 
-/* Bouton en mode "light" par défaut */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -72,29 +72,36 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #f9f9f9; /* Fond de bouton "light" */
+  background-color: #f9f9f9;
   cursor: pointer;
   transition: border-color 0.25s, background-color 0.25s;
 }
 button:hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Focus visible uniquement au clavier */
+:focus {
+  outline: none;
 }
 
-/* Bouton en mode "dark" */
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 3px;
+}
+
 .dark button {
   background-color: #1a1a1a;
 }
 .dark button:hover {
   border-color: #646cff;
 }
-
-
-/* 💡 L'ancienne @media query est supprimée */
-
 
 @keyframes fade-in {
   from {

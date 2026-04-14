@@ -6,6 +6,7 @@ import Paul from './pages/Paul';
 import Roxana from './pages/Roxana';
 import Mathis from './pages/Mathis';
 import Matthias from './pages/Matthias';
+import Steven from './pages/Steven';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/roxana" element={<Layout><Roxana /></Layout>} />
         <Route path="/mathis" element={<Layout><Mathis /></Layout>} />
         <Route path="/matthias" element={<Layout><Matthias /></Layout>} />
+        <Route path="/steven" element={<Layout><Steven /></Layout>} />
       </Routes>
     </Router>
   );
