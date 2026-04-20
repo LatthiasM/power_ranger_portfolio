@@ -1,6 +1,7 @@
 // Hero.tsx
 import { useEffect, useState } from "react";
 import ColoredSection from "./ColoredSection";
+import MagneticButton from "./MagneticButton";
 
 const rangers = [
   { label: "Paul",     color: "bg-blue-600",   ring: "ring-blue-400"   },
@@ -89,21 +90,25 @@ export default function Hero() {
 
           {/* Boutons CTA */}
           <div className="flex flex-wrap gap-4 mb-10">
-            <a
-              href="#projects"
-              className="px-6 py-3 rounded-xl font-semibold text-white bg-indigo-600 hover:bg-indigo-500
-                         dark:bg-indigo-500 dark:hover:bg-indigo-400 transition shadow-lg shadow-indigo-500/30"
-            >
-              Voir nos projets →
-            </a>
-            <a
-              href="#team"
-              className="px-6 py-3 rounded-xl font-semibold
-                         bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white
-                         hover:bg-gray-200 dark:hover:bg-white/20 transition border border-gray-200 dark:border-white/20"
-            >
-              Notre équipe
-            </a>
+            <MagneticButton strength={0.4} radius={100}>
+              <a
+                href="#projects"
+                className="block px-6 py-3 rounded-xl font-semibold text-white bg-indigo-600 hover:bg-indigo-500
+                           dark:bg-indigo-500 dark:hover:bg-indigo-400 transition shadow-lg shadow-indigo-500/30"
+              >
+                Voir nos projets →
+              </a>
+            </MagneticButton>
+            <MagneticButton strength={0.3} radius={90}>
+              <a
+                href="#team"
+                className="block px-6 py-3 rounded-xl font-semibold
+                           bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-white
+                           hover:bg-gray-200 dark:hover:bg-white/20 transition border border-gray-200 dark:border-white/20"
+              >
+                Notre équipe
+              </a>
+            </MagneticButton>
           </div>
 
           {/* Badges Rangers */}

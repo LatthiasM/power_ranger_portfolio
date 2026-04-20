@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import ColoredSection from './ColoredSection';
 import { Toast } from './Toast';
+import MagneticButton from './MagneticButton';
 
 export default function Contact() {
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' } | null>(null);
@@ -53,15 +54,17 @@ export default function Contact() {
             className="p-3 rounded bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white
                        placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition resize-none"
           />
-          <button
-            type="submit"
-            disabled={sending}
-            className="bg-yellow-400 text-black py-3 px-6 rounded font-semibold
-                       hover:bg-yellow-300 transition disabled:opacity-60 disabled:cursor-not-allowed
-                       focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
-          >
-            {sending ? 'Envoi en cours…' : 'Envoyer'}
-          </button>
+          <MagneticButton strength={0.25} radius={80} className="w-full">
+            <button
+              type="submit"
+              disabled={sending}
+              className="w-full bg-yellow-400 text-black py-3 px-6 rounded font-semibold
+                         hover:bg-yellow-300 transition disabled:opacity-60 disabled:cursor-not-allowed
+                         focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-400"
+            >
+              {sending ? 'Envoi en cours…' : 'Envoyer'}
+            </button>
+          </MagneticButton>
         </form>
       </ColoredSection>
 

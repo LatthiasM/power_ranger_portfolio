@@ -3,6 +3,7 @@ import { useState, useRef } from 'react';
 import ColoredSection from './ColoredSection';
 import FadeInSection from './FadeInSection';
 import { ButtonLeft, ButtonRight } from './ArrowButton';
+import MagneticButton from './MagneticButton';
 
 const projectsData = [
   {
@@ -99,16 +100,18 @@ export default function ProjectsSection() {
                     ))}
                   </div>
 
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-purple-600 dark:bg-purple-500 text-white py-2 px-5 rounded font-semibold
-                               hover:bg-purple-500 dark:hover:bg-purple-400 transition
-                               focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500"
-                  >
-                    Voir le projet
-                  </a>
+                  <MagneticButton strength={0.35} radius={80}>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block bg-purple-600 dark:bg-purple-500 text-white py-2 px-5 rounded font-semibold
+                                 hover:bg-purple-500 dark:hover:bg-purple-400 transition
+                                 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-500"
+                    >
+                      Voir le projet
+                    </a>
+                  </MagneticButton>
                 </div>
               </div>
             </div>
